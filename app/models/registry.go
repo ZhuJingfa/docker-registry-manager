@@ -124,7 +124,7 @@ func (r *Registry) Refresh() {
 			}
 
 			// Get the tag size information
-			size, err := ur.TagSize(repoName, tagName)
+			size, err := ur.TagSizeByObj(man)
 			if err != nil {
 				logrus.Error(err)
 			}

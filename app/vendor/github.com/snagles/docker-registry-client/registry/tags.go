@@ -1,5 +1,9 @@
 package registry
 
+import (
+	manifestV2 "github.com/docker/distribution/manifest/schema2"
+)
+
 type tagsResponse struct {
 	Tags []string `json:"tags"`
 }
@@ -29,6 +33,14 @@ func (registry *Registry) TagSize(repository, reference string) (size int64, err
 	if err != nil {
 		return -1, err
 	}
+	size = int64(0)
+	for _, layer := range deserialized.Layers {
+		size += layer.Size
+	}
+	return size, nil
+}
+
+func (registry *Registry) TagSizeByObj(deserialized *manifestV2.DeserializedManifest) (size int64, err error) {
 	size = int64(0)
 	for _, layer := range deserialized.Layers {
 		size += layer.Size

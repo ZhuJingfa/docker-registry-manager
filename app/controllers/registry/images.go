@@ -1,14 +1,10 @@
 package registry
 
 import (
-	"errors"
-	"fmt"
 	"net/url"
 
 	"github.com/astaxie/beego"
-	manifestV2 "github.com/docker/distribution/manifest/schema2"
 	"github.com/snagles/docker-registry-manager/app/models"
-	"github.com/snagles/docker-registry-manager/app/models/dockerhub"
 )
 
 // ImagesController controls access to any meta information surrounding a registry image
@@ -93,51 +89,5 @@ func (c *ImagesController) GetImages() {
 
 	// Compare the two manifest layers
 	c.TplName = "images.tpl"
-	hubManifest, err := dockerhub.GetManifest(repositoryName, tag.Name)
-	if hubManifest == nil || err != nil {
-		c.Data["dockerHub"] = struct {
-			Error    error
-			ImageURL string
-		}{
-			errors.New("Unable to retrieve information from dockerhub"),
-			"",
-		}
-		return
-	} else if hubManifest.SchemaVersion == tag.SchemaVersion {
-		diffLayers := make(map[string]struct{})
-		var size int64
-		if err == nil {
-			for _, layer := range tag.DeserializedManifest.Layers {
-				diffLayers[layer.Digest.String()] = struct{}{}
-			}
-			for _, layer := range hubManifest.Layers {
-				size += layer.Size
-				if _, ok := diffLayers[layer.Digest.String()]; ok {
-					delete(diffLayers, layer.Digest.String())
-				}
-			}
-		}
-
-		c.Data["dockerHub"] = struct {
-			DiffLayers map[string]struct{}
-			Manifest   *manifestV2.DeserializedManifest
-			ImageURL   string
-			Error      error
-			Size       int64
-		}{
-			diffLayers,
-			hubManifest,
-			fmt.Sprintf("https://hub.docker.com/r/library/%s/tags", repositoryName),
-			err,
-			size,
-		}
-	} else {
-		c.Data["dockerHub"] = struct {
-			Error    error
-			ImageURL string
-		}{
-			errors.New("Different manifest scheme versions"),
-			fmt.Sprintf("https://hub.docker.com/r/library/%s/tags", repositoryName),
-		}
-	}
+	// remove dockerhub info
 }
