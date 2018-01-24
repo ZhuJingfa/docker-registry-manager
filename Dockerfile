@@ -1,29 +1,26 @@
-# Start from an Alpine image with the latest version of Go installed
-FROM golang:alpine as build-env
+#构建命令：docker build -t fanghui/system/registry-manager .
+#使用docker多层次构建新特性
+# step 1
+FROM fanghui/app/dev-golang as builder
+RUN wget https://codeload.github.com/snagles/docker-registry-manager/zip/master && unzip master \
+    && mkdir -p src/github.com/snagles/docker-registry-manager \
+    && mv docker-registry-manager-master/* src/github.com/snagles/docker-registry-manager/ \
+    && CGO_ENABLED=0 go get -a -ldflags '-s' -v github.com/snagles/docker-registry-manager/app
 
-# Install git and the bee tool used for deployment
-RUN apk add --no-cache git
+# step 2
+FROM fanghui/system/alpine
 
-# Copy the local package files to the container's workspace.
-ADD . /go/src/github.com/snagles/docker-registry-manager
+# make app base dir
+ENV REGISTRY_MANAGER_BASE_DIR=/root/go/src/github.com/snagles/docker-registry-manager/app
 
-# Build the application using the bee tool
-RUN go get github.com/beego/bee
-RUN bee pack -p /go/src/github.com/snagles/docker-registry-manager/app
-RUN mkdir /app
-RUN tar -xzvf /go/app.tar.gz --directory /app
+# ban error: FATA[0000] mkdir /root/go/src/github.com/snagles/docker-registry-manager/app/logs/: no such file or directory
+RUN mkdir -p ${REGISTRY_MANAGER_BASE_DIR}/logs
 
-# Distributed image
-FROM alpine:3.7
-RUN apk add --no-cache ca-certificates
+COPY --from=builder /data/go/bin/app /app
 
-# Copy packed beego tar
-WORKDIR /app
-COPY --from=build-env /app /app
+# make sure workdir, fetch source.
+WORKDIR ${FH_BUILD_DIR}
+COPY --from=builder /data/go/src/github.com/snagles/docker-registry-manager/app/static/ ${FH_BUILD_DIR}/static/
+COPY --from=builder /data/go/src/github.com/snagles/docker-registry-manager/app/views/ ${FH_BUILD_DIR}/views/
 
-# Set the default config location and volume
-ENV REGISTRY_CONFIG /var/lib/docker-registry-manager/config.yml
-VOLUME ["/var/lib/docker-registry-manager"]
-
-# Run the app by default when the container starts
-CMD ["/app/app"]
+CMD ["/app"]
