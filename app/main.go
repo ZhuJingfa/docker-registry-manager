@@ -16,6 +16,7 @@ import (
 	_ "github.com/snagles/docker-registry-manager/app/routers"
 	"github.com/spf13/viper"
 	"github.com/urfave/cli"
+	"runtime/pprof"
 )
 
 const (
@@ -28,6 +29,7 @@ func main() {
 	app.Usage = "Connect to, view, and manage multiple private Docker registries"
 
 	var configPath string
+	var Pprof string
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:        "config-path, c",
@@ -35,9 +37,24 @@ func main() {
 			EnvVar:      "REGISTRY_CONFIG",
 			Destination: &configPath,
 		},
+		cli.StringFlag{
+			Name:        "pprof, p",
+			Usage:       "is enable pprof, and file name",
+			EnvVar:      "REGISTRY_PPROF",
+			Destination: &Pprof,
+		},
 	}
 
 	app.Action = func(ctx *cli.Context) {
+		if Pprof!="" {
+			f, err := os.Create(Pprof)
+			if err != nil {
+				logrus.Fatal(err)
+			}
+			pprof.StartCPUProfile(f)
+			defer pprof.StopCPUProfile()
+		}
+
 		c, err := parseConfig(configPath)
 		if err != nil {
 			logrus.Fatal(err)
@@ -95,6 +112,10 @@ func main() {
 		beego.AddFuncMap("bytefmtdiff", ByteDiffFmt)
 		beego.AddFuncMap("timeAgo", TimeAgo)
 		beego.AddFuncMap("oneIndex", func(i int) int { return i + 1 })
+
+		if Pprof!="" {
+			return
+		}
 		beego.Run()
 	}
 	app.Run(os.Args)

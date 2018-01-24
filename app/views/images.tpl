@@ -94,49 +94,7 @@
                   </a>
                 </h4>
                 <div class="well well-md">
-                  {{if .dockerHub.Error }}
-                    <strong>Unable to compare image to Dockerhub</strong>
-                    <small>{{.hubErr}}</small>
-                    <div>
-                      <span>{{.dockerHub.Error}}</span></div>
-                  {{else}}
-                    {{ $length := len .dockerHub.DiffLayers }}
-                    {{ if eq $length 0 }}
-                      <strong>Image is up to date.</strong>
-                      <div>
-                        <span>Both local and remote images have
-                          {{len .tag.DeserializedManifest.Layers}}
-                          layers and are
-                          {{bytefmt .tag.Size}}.</span></div>
-                    {{else}}
-                      <div>
-                        <strong>Image is not up to date.</strong>
-                      </div>
-                      <div>
-                        <span>There are
-                          {{len .dockerHub.DiffLayers}}
-                          different layers out of
-                          {{len .tag.DeserializedManifest.Layers}}
-                          total layers.</span></div>
-                      {{if ne .tag.Size .dockerHub.Size}}
-                        {{if gt .tag.Size .dockerHub.Size}}
-                          <div>
-                            <span>The Dockerhub image is
-                              {{bytefmtdiff .dockerHub.Size .tag.Size}}
-                              smaller</span></div>
-                        {{else if lt .tag.Size .dockerHub.Size}}
-                          <div>
-                            <span>The Dockerhub image is
-                              {{bytefmtdiff .dockerHub.Size .tag.Size}}
-                              larger</span></div>
-                        {{else}}
-                          <div>
-                            <span>The images are the same total size
-                              {{bytefmt .tag.Size}}</span></div>
-                        {{end}}
-                      {{end}}
-                    {{end}}
-                  {{end}}
+                  hello world.
                 </div>
               </div>
             </div>
