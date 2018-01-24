@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/astaxie/beego"
-	client "github.com/snagles/docker-registry-client/registry"
-	"github.com/snagles/docker-registry-manager/app/models"
+	client "github.com/zhujingfa/docker-registry-client/registry"
+	"github.com/zhujingfa/docker-registry-manager/app/models"
 )
 
 // RegistriesController extends the beego.Controller type

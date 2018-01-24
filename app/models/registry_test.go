@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/snagles/docker-registry-manager/app/testutils"
+	"github.com/zhujingfa/docker-registry-manager/app/testutils"
 )
 
 func TestAddRegistry(t *testing.T) {

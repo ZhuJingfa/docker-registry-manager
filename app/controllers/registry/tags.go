@@ -6,7 +6,7 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/sirupsen/logrus"
-	"github.com/snagles/docker-registry-manager/app/models"
+	"github.com/zhujingfa/docker-registry-manager/app/models"
 )
 
 // TagsController controls interaction between the UI and all tag related information

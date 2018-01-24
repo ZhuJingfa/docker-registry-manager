@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	client "github.com/snagles/docker-registry-client/registry"
+	client "github.com/zhujingfa/docker-registry-client/registry"
 )
 
 // AllRegistries contains a list of added registries using their hostnames

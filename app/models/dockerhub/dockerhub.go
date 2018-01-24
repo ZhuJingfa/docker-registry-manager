@@ -3,7 +3,7 @@ package dockerhub
 import (
 	manifestV2 "github.com/docker/distribution/manifest/schema2"
 	"github.com/sirupsen/logrus"
-	client "github.com/snagles/docker-registry-client/registry"
+	client "github.com/zhujingfa/docker-registry-client/registry"
 )
 
 // URL for dockerhub connection

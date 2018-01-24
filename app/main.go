@@ -12,8 +12,8 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/sirupsen/logrus"
-	"github.com/snagles/docker-registry-manager/app/models"
-	_ "github.com/snagles/docker-registry-manager/app/routers"
+	"github.com/zhujingfa/docker-registry-manager/app/models"
+	_ "github.com/zhujingfa/docker-registry-manager/app/routers"
 	"github.com/spf13/viper"
 	"github.com/urfave/cli"
 	"runtime/pprof"

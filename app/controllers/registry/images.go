@@ -4,7 +4,7 @@ import (
 	"net/url"
 
 	"github.com/astaxie/beego"
-	"github.com/snagles/docker-registry-manager/app/models"
+	"github.com/zhujingfa/docker-registry-manager/app/models"
 )
 
 // ImagesController controls access to any meta information surrounding a registry image
