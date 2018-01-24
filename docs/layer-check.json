@@ -1,0 +1,150 @@
+{
+  "architecture": "amd64",
+  "config": {
+    "Hostname": "",
+    "Domainname": "",
+    "User": "",
+    "AttachStdin": false,
+    "AttachStdout": false,
+    "AttachStderr": false,
+    "ExposedPorts": {
+      "8000/tcp": {},
+      "8001/tcp": {},
+      "8443/tcp": {},
+      "8444/tcp": {}
+    },
+    "Tty": false,
+    "OpenStdin": false,
+    "StdinOnce": false,
+    "Env": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "KONG_VERSION=0.12.1",
+      "KONG_SHA256=9f699e20e7d3aa6906b14d6b52cae9996995d595d646f9b10ce09c61d91a4257"
+    ],
+    "Cmd": [
+      "/usr/local/openresty/nginx/sbin/nginx",
+      "-c",
+      "/usr/local/kong/nginx.conf",
+      "-p",
+      "/usr/local/kong/"
+    ],
+    "ArgsEscaped": true,
+    "Image": "sha256:324296a7d30ec0845d0257fd3e664fbb924ed291834423a0ae09f61ef3b1151f",
+    "Volumes": null,
+    "WorkingDir": "",
+    "Entrypoint": [
+      "/docker-entrypoint.sh"
+    ],
+    "OnBuild": [],
+    "Labels": {
+      "maintainer": "Marco Palladino, marco@mashape.com"
+    },
+    "StopSignal": "SIGTERM"
+  },
+  "container": "48f58061506eee46f6736059b4be0e07e5050e605b1c9d335575a578aa4aac58",
+  "container_config": {
+    "Hostname": "48f58061506e",
+    "Domainname": "",
+    "User": "",
+    "AttachStdin": false,
+    "AttachStdout": false,
+    "AttachStderr": false,
+    "ExposedPorts": {
+      "8000/tcp": {},
+      "8001/tcp": {},
+      "8443/tcp": {},
+      "8444/tcp": {}
+    },
+    "Tty": false,
+    "OpenStdin": false,
+    "StdinOnce": false,
+    "Env": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "KONG_VERSION=0.12.1",
+      "KONG_SHA256=9f699e20e7d3aa6906b14d6b52cae9996995d595d646f9b10ce09c61d91a4257"
+    ],
+    "Cmd": [
+      "/bin/sh",
+      "-c",
+      "#(nop) ",
+      "CMD [\"/usr/local/openresty/nginx/sbin/nginx\" \"-c\" \"/usr/local/kong/nginx.conf\" \"-p\" \"/usr/local/kong/\"]"
+    ],
+    "ArgsEscaped": true,
+    "Image": "sha256:324296a7d30ec0845d0257fd3e664fbb924ed291834423a0ae09f61ef3b1151f",
+    "Volumes": null,
+    "WorkingDir": "",
+    "Entrypoint": [
+      "/docker-entrypoint.sh"
+    ],
+    "OnBuild": [],
+    "Labels": {
+      "maintainer": "Marco Palladino, marco@mashape.com"
+    },
+    "StopSignal": "SIGTERM"
+  },
+  "created": "2018-01-19T19:55:48.31951407Z",
+  "docker_version": "17.06.2-ce",
+  "history": [
+    {
+      "created": "2018-01-09T21:10:38.317079775Z",
+      "created_by": "/bin/sh -c #(nop) ADD file:6edc55fb54ec9fc3658c8f5176a70e792103a516154442f94fed8e0290e4960e in / "
+    },
+    {
+      "created": "2018-01-09T21:10:38.538173323Z",
+      "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/sh\"]",
+      "empty_layer": true
+    },
+    {
+      "created": "2018-01-10T01:26:18.066356582Z",
+      "created_by": "/bin/sh -c #(nop)  LABEL maintainer=Marco Palladino, marco@mashape.com",
+      "empty_layer": true
+    },
+    {
+      "created": "2018-01-19T19:55:33.513342325Z",
+      "created_by": "/bin/sh -c #(nop)  ENV KONG_VERSION=0.12.1",
+      "empty_layer": true
+    },
+    {
+      "created": "2018-01-19T19:55:33.739035618Z",
+      "created_by": "/bin/sh -c #(nop)  ENV KONG_SHA256=9f699e20e7d3aa6906b14d6b52cae9996995d595d646f9b10ce09c61d91a4257",
+      "empty_layer": true
+    },
+    {
+      "created": "2018-01-19T19:55:46.838894805Z",
+      "created_by": "/bin/sh -c apk add --no-cache --virtual .build-deps wget tar ca-certificates \t\u0026\u0026 apk add --no-cache libgcc openssl pcre perl tzdata \t\u0026\u0026 wget -O kong.tar.gz \"https://bintray.com/kong/kong-community-edition-alpine-tar/download_file?file_path=kong-community-edition-$KONG_VERSION.apk.tar.gz\" \t\u0026\u0026 echo \"$KONG_SHA256 *kong.tar.gz\" | sha256sum -c - \t\u0026\u0026 tar -xzf kong.tar.gz -C /tmp \t\u0026\u0026 rm -f kong.tar.gz \t\u0026\u0026 cp -R /tmp/usr / \t\u0026\u0026 rm -rf /tmp/usr \t\u0026\u0026 cp -R /tmp/etc / \t\u0026\u0026 rm -rf /tmp/etc \t\u0026\u0026 apk del .build-deps"
+    },
+    {
+      "created": "2018-01-19T19:55:47.333382302Z",
+      "created_by": "/bin/sh -c #(nop) COPY file:0ce55305f95ddcb78ffb96b9502c795c4dd1040025f4ec7c3e19e4b889022b90 in /docker-entrypoint.sh "
+    },
+    {
+      "created": "2018-01-19T19:55:47.595009442Z",
+      "created_by": "/bin/sh -c #(nop)  ENTRYPOINT [\"/docker-entrypoint.sh\"]",
+      "empty_layer": true
+    },
+    {
+      "created": "2018-01-19T19:55:47.818237763Z",
+      "created_by": "/bin/sh -c #(nop)  EXPOSE 8000/tcp 8001/tcp 8443/tcp 8444/tcp",
+      "empty_layer": true
+    },
+    {
+      "created": "2018-01-19T19:55:48.078134602Z",
+      "created_by": "/bin/sh -c #(nop)  STOPSIGNAL [SIGTERM]",
+      "empty_layer": true
+    },
+    {
+      "created": "2018-01-19T19:55:48.31951407Z",
+      "created_by": "/bin/sh -c #(nop)  CMD [\"/usr/local/openresty/nginx/sbin/nginx\" \"-c\" \"/usr/local/kong/nginx.conf\" \"-p\" \"/usr/local/kong/\"]",
+      "empty_layer": true
+    }
+  ],
+  "os": "linux",
+  "rootfs": {
+    "type": "layers",
+    "diff_ids": [
+      "sha256:9dfa40a0da3b1a8a7c34abc596d81ede2dba4ecd5c0a7211086d6685da1ce6ef",
+      "sha256:89d5718838d3976c5f4af69f53c98d2e366c558a91a79882fc243188d0306994",
+      "sha256:3865f5d6b858cc1b0b6f04733d143c52bfe586ccbe47621510a5019e4289d8b4"
+    ]
+  }
+}

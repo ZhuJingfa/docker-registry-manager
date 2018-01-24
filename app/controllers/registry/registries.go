@@ -51,7 +51,10 @@ func (c *RegistriesController) AddRegistry() {
 	if err != nil {
 		c.CustomAbort(404, err.Error())
 	}
-
+	//最小5分钟刷新一次
+	if interval<300 {
+		interval=300
+	}
 	ttl := time.Duration(interval) * time.Second
 
 	_, err = manager.AddRegistry(scheme, host, "", "", port, ttl, skipTLS)

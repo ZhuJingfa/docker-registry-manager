@@ -51,7 +51,8 @@
         "order": [
           [1, "asc"]
         ],
-        "info": false
+        "info": false,
+        "pageLength": 50
       });
       $(function () {
         $('[data-toggle="tooltip"]').tooltip({container: 'body'})

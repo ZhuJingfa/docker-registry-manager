@@ -132,6 +132,8 @@ func (r *Registry) Refresh() {
 			repo.Tags[tagName] = &Tag{Name: tagName, V1Compatibility: &v1, Size: int64(size), DeserializedManifest: man}
 		}
 		ur.Repositories[repoName] = &repo
+
+		time.Sleep(100*time.Millisecond)
 	}
 	AllRegistries.Lock()
 	AllRegistries.Registries[ur.Name] = &ur

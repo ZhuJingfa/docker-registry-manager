@@ -58,7 +58,7 @@
         "order": [
           [1, "asc"]
         ],
-        "pageLength": 25
+        "pageLength": 50
       });
       $(function () {
         $('[data-toggle="tooltip"]').tooltip({container: 'body'})

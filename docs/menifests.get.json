@@ -1,0 +1,278 @@
+{
+   "schemaVersion": 1,
+   "name": "jenkins/jenkins",
+   "tag": "lts-alpine",
+   "architecture": "amd64",
+   "fsLayers": [
+      {
+         "blobSum": "sha256:473b56698c2bdc7db81a69abdd66c324fc7277c2c5017f294176116a157a7b0e"
+      },
+      {
+         "blobSum": "sha256:00cd5e414dfa333158ae469dd8f3781b4f7da871a8d7b75e37fe42f1a8b13b02"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:1ec9da139e4c3175a36740147d0682b6eb308eb0e080b2772684531364acfeac"
+      },
+      {
+         "blobSum": "sha256:388f0d084272d0cb9f4a23eb41b5587d9d54e836e41dfb778a08a50bd32b9604"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:833dda884708fb2fef858088d8b114619a33685cecfd953a1c05abb86a174aaa"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:eeb16885aa2ceb14da04f6d74ff54029273b0a7700ed4da4970c2021eff7387a"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:b7e3a259f220935d51b1e009c7d254237a6c9a0363a77f63b8fbe258d39b6427"
+      },
+      {
+         "blobSum": "sha256:8b8e44103a852967f2b9881ddbe2be73e972d3cfea6b4a605075cc98b97e6c66"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:c34ec9d510ad740288c71193b55b427ee9c3ef2de0e11d3e6295ac38da2d397e"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a6e94bbd70a24c546c7103a8435c623c1776ce9eff1bbc1ef9dad809e3eb3aeb"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:0df9d232dde2b36f1f7952301a3b9baec0d6d71129a82dad9223f5645b3bda17"
+      },
+      {
+         "blobSum": "sha256:31172a96e9a9eb3cd4114532666ec4599ed4f4fec29f6d3ccd1671cf3fb4d193"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:551fb2fe7af14d58f7f526a3f3eef55a0d1740f28b981bf3270c6ebb2d3a0dda"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:b2388ca7fa65a68824f137dc4184ea3ea789570753d795042d9af40fc9383448"
+      }
+   ],
+   "history": [
+      {
+         "v1Compatibility": "{\"architecture\":\"amd64\",\"config\":{\"Hostname\":\"3fab32a108fc\",\"Domainname\":\"\",\"User\":\"jenkins\",\"AttachStdin\":false,\"AttachStdout\":false,\"AttachStderr\":false,\"ExposedPorts\":{\"50000/tcp\":{},\"8080/tcp\":{}},\"Tty\":false,\"OpenStdin\":false,\"StdinOnce\":false,\"Env\":[\"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin\",\"LANG=C.UTF-8\",\"JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk\",\"JAVA_VERSION=8u121\",\"JAVA_ALPINE_VERSION=8.121.13-r0\",\"JENKINS_HOME=/var/jenkins_home\",\"JENKINS_SLAVE_AGENT_PORT=50000\",\"TINI_VERSION=0.14.0\",\"TINI_SHA=6c41ec7d33e857d4779f14d9c74924cab0c7973485d2972419a3b7c7620ff5fd\",\"JENKINS_VERSION=2.73.2\",\"JENKINS_UC=https://updates.jenkins.io\",\"JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental\",\"COPY_REFERENCE_FILE_LOG=/var/jenkins_home/copy_reference_file.log\"],\"Cmd\":null,\"ArgsEscaped\":true,\"Image\":\"sha256:4002c3a09c871b11f28681f1be36f16a6bb3aedf487346d437fa4f3df0e0752c\",\"Volumes\":{\"/var/jenkins_home\":{}},\"WorkingDir\":\"\",\"Entrypoint\":[\"/bin/tini\",\"--\",\"/usr/local/bin/jenkins.sh\"],\"OnBuild\":[],\"Labels\":{}},\"container_config\":{\"Hostname\":\"3fab32a108fc\",\"Domainname\":\"\",\"User\":\"jenkins\",\"AttachStdin\":false,\"AttachStdout\":false,\"AttachStderr\":false,\"ExposedPorts\":{\"50000/tcp\":{},\"8080/tcp\":{}},\"Tty\":false,\"OpenStdin\":false,\"StdinOnce\":false,\"Env\":[\"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin\",\"LANG=C.UTF-8\",\"JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk\",\"JAVA_VERSION=8u121\",\"JAVA_ALPINE_VERSION=8.121.13-r0\",\"JENKINS_HOME=/var/jenkins_home\",\"JENKINS_SLAVE_AGENT_PORT=50000\",\"TINI_VERSION=0.14.0\",\"TINI_SHA=6c41ec7d33e857d4779f14d9c74924cab0c7973485d2972419a3b7c7620ff5fd\",\"JENKINS_VERSION=2.73.2\",\"JENKINS_UC=https://updates.jenkins.io\",\"JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental\",\"COPY_REFERENCE_FILE_LOG=/var/jenkins_home/copy_reference_file.log\"],\"Cmd\":[\"/bin/sh\",\"-c\",\"#(nop) COPY file:d1cc5c1c812c4c4412381f7f8f9223a37c9bff4d26d1fa78b3f44c25a3432022 in /usr/local/bin/install-plugins.sh \"],\"ArgsEscaped\":true,\"Image\":\"sha256:4002c3a09c871b11f28681f1be36f16a6bb3aedf487346d437fa4f3df0e0752c\",\"Volumes\":{\"/var/jenkins_home\":{}},\"WorkingDir\":\"\",\"Entrypoint\":[\"/bin/tini\",\"--\",\"/usr/local/bin/jenkins.sh\"],\"OnBuild\":[],\"Labels\":{}},\"created\":\"2017-10-11T15:15:28.258536937Z\",\"docker_version\":\"17.07.0-ce\",\"id\":\"fa8986e6b8a4d3630348b66ef102f7a467f590eb427bb843c254fa09271dfd9f\",\"os\":\"linux\",\"parent\":\"96debc731f2758d7fb1b3d6ed9bfcc7ba6b6a0574947480f743c05b175db0219\"}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"96debc731f2758d7fb1b3d6ed9bfcc7ba6b6a0574947480f743c05b175db0219\",\"parent\":\"8c4620d06adc56520e22fab0489217d817f6a2a34126f386ecb246408961dde3\",\"created\":\"2017-10-11T15:15:28.060255503Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop) COPY file:6e2e8599dd2e5fb8acdedd05fa088689f5a3bef3bf5568e751dd1e69b8fdc225 in /usr/local/bin/plugins.sh \"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"8c4620d06adc56520e22fab0489217d817f6a2a34126f386ecb246408961dde3\",\"parent\":\"48201175073c2442549f0ee704edf7c2e948a701c342843b74295ab08fc60ceb\",\"created\":\"2017-10-11T15:15:27.696816409Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENTRYPOINT [\\\"/bin/tini\\\" \\\"--\\\" \\\"/usr/local/bin/jenkins.sh\\\"]\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"48201175073c2442549f0ee704edf7c2e948a701c342843b74295ab08fc60ceb\",\"parent\":\"b3b2bd744b979e11433915541459ac67ec145ccbf844ff8ec9aafcede132fe05\",\"created\":\"2017-10-11T15:15:27.329477582Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop) COPY file:89aebe3fe0058c2cacc15a8691477c0cd693afccc0a761fc05312f74b0b841a7 in /usr/local/bin/jenkins.sh \"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"b3b2bd744b979e11433915541459ac67ec145ccbf844ff8ec9aafcede132fe05\",\"parent\":\"880ca8e697d3f4db9176af88124d24b72120222d8c9c278e7ac2ec7fb0ba7e2f\",\"created\":\"2017-10-11T15:15:27.122567777Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop) COPY file:930cd907f30b185b8a8cbc81c33fca2a24eee4b955ef0647e762ec9a1be328d5 in /usr/local/bin/jenkins-support \"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"880ca8e697d3f4db9176af88124d24b72120222d8c9c278e7ac2ec7fb0ba7e2f\",\"parent\":\"96f9b998284b479cb015a8c5a6ea234c201250c257354e7d00f92cc620ade52c\",\"created\":\"2017-10-11T15:15:26.739071317Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  USER [jenkins]\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"96f9b998284b479cb015a8c5a6ea234c201250c257354e7d00f92cc620ade52c\",\"parent\":\"07fd64978a959adc6a92f7d089f94382723d5dfb24f3475735f264a7bb142a60\",\"created\":\"2017-10-11T15:15:26.20423161Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV COPY_REFERENCE_FILE_LOG=/var/jenkins_home/copy_reference_file.log\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"07fd64978a959adc6a92f7d089f94382723d5dfb24f3475735f264a7bb142a60\",\"parent\":\"8cc2c49fb3ecb03bf5e3469930f0672732362ceee1d9f062fdfa8e818cbfedd2\",\"created\":\"2017-10-11T15:15:25.621466208Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  EXPOSE 50000/tcp\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"8cc2c49fb3ecb03bf5e3469930f0672732362ceee1d9f062fdfa8e818cbfedd2\",\"parent\":\"2aa00bbc74b7d1d90300a84dc18a6ed369bbc584929cef1d86f5e50b6a3223b1\",\"created\":\"2017-10-11T15:15:25.103812142Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  EXPOSE 8080/tcp\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"2aa00bbc74b7d1d90300a84dc18a6ed369bbc584929cef1d86f5e50b6a3223b1\",\"parent\":\"738f8d8807577279674f0597dcf0cfd63a2e0c2277d5341aa0e3d94c2da31dfd\",\"created\":\"2017-10-11T15:15:24.598019375Z\",\"container_config\":{\"Cmd\":[\"|8 JENKINS_SHA=f6d1351beef34d980b32f8c463be505445f637e2fc62156fecd42891c53c97d3 JENKINS_URL=https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/2.73.2/jenkins-war-2.73.2.war agent_port=50000 gid=1000 group=jenkins http_port=8080 uid=1000 user=jenkins /bin/sh -c chown -R ${user} \\\"$JENKINS_HOME\\\" /usr/share/jenkins/ref\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"738f8d8807577279674f0597dcf0cfd63a2e0c2277d5341aa0e3d94c2da31dfd\",\"parent\":\"bd28a1358d8ceff9552de9bbf4568d1da34f4d5e3de803f647e90155bbb98b62\",\"created\":\"2017-10-11T15:15:23.417212345Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"bd28a1358d8ceff9552de9bbf4568d1da34f4d5e3de803f647e90155bbb98b62\",\"parent\":\"bafb08b5a2b188abaa71018ef5e0d0d28ab9b2dfaf348dbe8fe6107ded9d402e\",\"created\":\"2017-10-11T15:15:22.935797078Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV JENKINS_UC=https://updates.jenkins.io\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"bafb08b5a2b188abaa71018ef5e0d0d28ab9b2dfaf348dbe8fe6107ded9d402e\",\"parent\":\"7af687db44dfec55287318e5dfc8a8a09e3cd38b712c9d85aa3c84d960be05af\",\"created\":\"2017-10-11T15:15:22.368631104Z\",\"container_config\":{\"Cmd\":[\"|8 JENKINS_SHA=f6d1351beef34d980b32f8c463be505445f637e2fc62156fecd42891c53c97d3 JENKINS_URL=https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/2.73.2/jenkins-war-2.73.2.war agent_port=50000 gid=1000 group=jenkins http_port=8080 uid=1000 user=jenkins /bin/sh -c curl -fsSL ${JENKINS_URL} -o /usr/share/jenkins/jenkins.war   \\u0026\\u0026 echo \\\"${JENKINS_SHA}  /usr/share/jenkins/jenkins.war\\\" | sha256sum -c -\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"7af687db44dfec55287318e5dfc8a8a09e3cd38b712c9d85aa3c84d960be05af\",\"parent\":\"2a82f8f0974ef2fc514708c1223c536ecbc0684122eee598ba6b58a9840846e1\",\"created\":\"2017-10-11T15:15:19.160986974Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG JENKINS_URL=https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/2.73.2/jenkins-war-2.73.2.war\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"2a82f8f0974ef2fc514708c1223c536ecbc0684122eee598ba6b58a9840846e1\",\"parent\":\"f0c1c558012afcaaa73683cc86c7f6fe844afbdc61ef67eac17d928bc070c3f0\",\"created\":\"2017-10-11T15:15:18.630549703Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG JENKINS_SHA=2d71b8f87c8417f9303a73d52901a59678ee6c0eefcf7325efed6035ff39372a\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"f0c1c558012afcaaa73683cc86c7f6fe844afbdc61ef67eac17d928bc070c3f0\",\"parent\":\"fcb1365e5f7d61737a142b8b95f0b179452540528429a317176090111d5863b1\",\"created\":\"2017-10-11T15:15:18.172348327Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV JENKINS_VERSION=2.73.2\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"fcb1365e5f7d61737a142b8b95f0b179452540528429a317176090111d5863b1\",\"parent\":\"329b81756814f845c8468677ac03c5ebb21aa8f04bed8f0ecc6be528fcaabc31\",\"created\":\"2017-10-11T15:15:17.736915139Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG JENKINS_VERSION\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"329b81756814f845c8468677ac03c5ebb21aa8f04bed8f0ecc6be528fcaabc31\",\"parent\":\"c14dbd50cd2c1894fcc675de1fe6bc6bb1f01fba72e510fc2b37f0cfcde8a2ac\",\"created\":\"2017-10-11T15:15:17.371063825Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop) COPY file:5e73235448d7c991a1e4374e0b7cd8e33fec9dc6951e43f8eb92d6657641403a in /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy \"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"c14dbd50cd2c1894fcc675de1fe6bc6bb1f01fba72e510fc2b37f0cfcde8a2ac\",\"parent\":\"2f0f57a429f8f8a8995d24d85ffc25ae3902b7032f0249e9707c8141e1105e74\",\"created\":\"2017-10-11T15:15:16.966479491Z\",\"container_config\":{\"Cmd\":[\"|6 agent_port=50000 gid=1000 group=jenkins http_port=8080 uid=1000 user=jenkins /bin/sh -c curl -fsSL https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini-static-amd64 -o /bin/tini \\u0026\\u0026 chmod +x /bin/tini   \\u0026\\u0026 echo \\\"$TINI_SHA  /bin/tini\\\" | sha256sum -c -\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"2f0f57a429f8f8a8995d24d85ffc25ae3902b7032f0249e9707c8141e1105e74\",\"parent\":\"633965f2475eb273e9f69210b7023fe3eaf8e51e50e7ec80749d2e73c3fe414c\",\"created\":\"2017-10-11T15:15:15.670921516Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV TINI_SHA=6c41ec7d33e857d4779f14d9c74924cab0c7973485d2972419a3b7c7620ff5fd\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"633965f2475eb273e9f69210b7023fe3eaf8e51e50e7ec80749d2e73c3fe414c\",\"parent\":\"45445656be793ca8db31035143570e78d442460a95a91d02407540a26884da91\",\"created\":\"2017-10-11T15:15:15.158886897Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV TINI_VERSION=0.14.0\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"45445656be793ca8db31035143570e78d442460a95a91d02407540a26884da91\",\"parent\":\"236bc5e10ca07219272f780a3b78110380ae7a3fc2ec28c9410ac281674ea8ac\",\"created\":\"2017-10-11T15:15:14.486857459Z\",\"container_config\":{\"Cmd\":[\"|6 agent_port=50000 gid=1000 group=jenkins http_port=8080 uid=1000 user=jenkins /bin/sh -c mkdir -p /usr/share/jenkins/ref/init.groovy.d\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"236bc5e10ca07219272f780a3b78110380ae7a3fc2ec28c9410ac281674ea8ac\",\"parent\":\"93a321eb6a4bb7602ef81844d003bc0ff89916da3cf15c5d51be3e2081a7f8e9\",\"created\":\"2017-10-11T15:15:13.172400928Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  VOLUME [/var/jenkins_home]\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"93a321eb6a4bb7602ef81844d003bc0ff89916da3cf15c5d51be3e2081a7f8e9\",\"parent\":\"d657a9754bdf7d3b97d57f20bf33ac5e893fe406b1cb69c6159b37a556472cf2\",\"created\":\"2017-10-11T15:15:12.551543012Z\",\"container_config\":{\"Cmd\":[\"|6 agent_port=50000 gid=1000 group=jenkins http_port=8080 uid=1000 user=jenkins /bin/sh -c addgroup -g ${gid} ${group}     \\u0026\\u0026 adduser -h \\\"$JENKINS_HOME\\\" -u ${uid} -G ${group} -s /bin/bash -D ${user}\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"d657a9754bdf7d3b97d57f20bf33ac5e893fe406b1cb69c6159b37a556472cf2\",\"parent\":\"71c24fff4193e65c2a998cba7040a9f5f3504478e4abb92a0f2a4fc1787bb0e4\",\"created\":\"2017-10-11T15:15:11.073880737Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV JENKINS_SLAVE_AGENT_PORT=50000\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"71c24fff4193e65c2a998cba7040a9f5f3504478e4abb92a0f2a4fc1787bb0e4\",\"parent\":\"d912793ec28ed79a2bbe1696f60cb05313a33216c57b6f42561c55196c12b095\",\"created\":\"2017-10-11T15:15:10.603564761Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV JENKINS_HOME=/var/jenkins_home\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"d912793ec28ed79a2bbe1696f60cb05313a33216c57b6f42561c55196c12b095\",\"parent\":\"3ca6c20395c962e2024b9729fcdbe9e41f3a2d82a5739c60105316fe98b2acc1\",\"created\":\"2017-10-11T15:15:10.076860221Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG agent_port=50000\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"3ca6c20395c962e2024b9729fcdbe9e41f3a2d82a5739c60105316fe98b2acc1\",\"parent\":\"58cb16499f14115e6ed7cbbd9ef68124e10dd11217493ef29616b2e6d8c38283\",\"created\":\"2017-10-11T15:15:09.562266981Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG http_port=8080\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"58cb16499f14115e6ed7cbbd9ef68124e10dd11217493ef29616b2e6d8c38283\",\"parent\":\"06f8357d5f0838e9e29b5f62183999169d22f06d5702dcd4063e4e402878be0e\",\"created\":\"2017-10-11T15:15:09.049049852Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG gid=1000\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"06f8357d5f0838e9e29b5f62183999169d22f06d5702dcd4063e4e402878be0e\",\"parent\":\"34d81ef0c0515bddcbb0a30d7d55c1bf8a90a323a854643b03de3cb128954937\",\"created\":\"2017-10-11T15:15:08.397717286Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG uid=1000\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"34d81ef0c0515bddcbb0a30d7d55c1bf8a90a323a854643b03de3cb128954937\",\"parent\":\"a251f9c1ea490773d64d2e66d4fec135ecfc6fa6c3b2a979a33d2cfff39dee69\",\"created\":\"2017-10-11T15:15:07.961654993Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG group=jenkins\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"a251f9c1ea490773d64d2e66d4fec135ecfc6fa6c3b2a979a33d2cfff39dee69\",\"parent\":\"6b3bc6306fb99cea821d94d5c296827bfe28e667df5a02ed98fdca67fd071f3f\",\"created\":\"2017-10-11T15:15:07.407415926Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG user=jenkins\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"6b3bc6306fb99cea821d94d5c296827bfe28e667df5a02ed98fdca67fd071f3f\",\"parent\":\"e2e703855a47d7135427e2ee8a5f2ecfcbd9e262ec2d04498e00b020accffd6d\",\"created\":\"2017-10-11T15:15:06.744433563Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c apk add --no-cache git openssh-client curl unzip bash ttf-dejavu coreutils\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"e2e703855a47d7135427e2ee8a5f2ecfcbd9e262ec2d04498e00b020accffd6d\",\"parent\":\"6febf81f4d453a621610b2e411abb86d5282b89c8d4a874110ac41e55ea9d414\",\"created\":\"2017-05-10T22:40:01.190109744Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c set -x \\t\\u0026\\u0026 apk add --no-cache \\t\\topenjdk8=\\\"$JAVA_ALPINE_VERSION\\\" \\t\\u0026\\u0026 [ \\\"$JAVA_HOME\\\" = \\\"$(docker-java-home)\\\" ]\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"6febf81f4d453a621610b2e411abb86d5282b89c8d4a874110ac41e55ea9d414\",\"parent\":\"2eecbbcf4d6a568c0bc3f7e201b503dc26790609dd31da552c96293864500fa2\",\"created\":\"2017-05-10T22:39:56.415754186Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV JAVA_ALPINE_VERSION=8.121.13-r0\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"2eecbbcf4d6a568c0bc3f7e201b503dc26790609dd31da552c96293864500fa2\",\"parent\":\"941bdcdc98036291597f07a275d45513578fe7c58e920e8b789c088b97794b42\",\"created\":\"2017-05-10T22:39:55.599539699Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV JAVA_VERSION=8u121\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"941bdcdc98036291597f07a275d45513578fe7c58e920e8b789c088b97794b42\",\"parent\":\"dbf3081d152eeb484f349a4298b3a7b7d41ebca6c50985706487b4628839bb83\",\"created\":\"2017-05-10T22:39:54.888910485Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"dbf3081d152eeb484f349a4298b3a7b7d41ebca6c50985706487b4628839bb83\",\"parent\":\"2bf163339207142e8177ed8e2c07bee32c683af8fd7d28dae6bfaf18d734d295\",\"created\":\"2017-05-10T22:39:54.184339575Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"2bf163339207142e8177ed8e2c07bee32c683af8fd7d28dae6bfaf18d734d295\",\"parent\":\"b2229fcf51c22383fa82fb107052650c675dcce8ae1ef2c26fa3eb20de164a81\",\"created\":\"2017-05-10T22:39:53.423027137Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c { \\t\\techo '#!/bin/sh'; \\t\\techo 'set -e'; \\t\\techo; \\t\\techo 'dirname \\\"$(dirname \\\"$(readlink -f \\\"$(which javac || which java)\\\")\\\")\\\"'; \\t} \\u003e /usr/local/bin/docker-java-home \\t\\u0026\\u0026 chmod +x /usr/local/bin/docker-java-home\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"b2229fcf51c22383fa82fb107052650c675dcce8ae1ef2c26fa3eb20de164a81\",\"parent\":\"39cf0e50f98a2bf0f18459aeb94c3f7daa3c0e86cc3b53775af7dd95f4f1f8ee\",\"created\":\"2017-05-10T22:39:51.75960093Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ENV LANG=C.UTF-8\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"39cf0e50f98a2bf0f18459aeb94c3f7daa3c0e86cc3b53775af7dd95f4f1f8ee\",\"parent\":\"8953ad8bf1627b31d880572c64a6068cd35e3f6a2fc4a0f96bb41009deae46c8\",\"created\":\"2017-05-10T16:38:17.391552466Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  CMD [\\\"/bin/sh\\\"]\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"8953ad8bf1627b31d880572c64a6068cd35e3f6a2fc4a0f96bb41009deae46c8\",\"created\":\"2017-05-10T16:38:16.632557712Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop) ADD file:63f63606d6e289eb607c90e31de81802258906712727e473a2898f0f1ae55bb5 in / \"]}}"
+      }
+   ],
+   "signatures": [
+      {
+         "header": {
+            "jwk": {
+               "crv": "P-256",
+               "kid": "YCBP:FHDO:XRVS:J4JI:VMGV:XOKD:LPMI:VPOC:RPOA:IZ2S:B5TA:GWJ4",
+               "kty": "EC",
+               "x": "DCuL-UACC0u4h-ufTomKuJOxTJM25m5dgeMK_lDkTpM",
+               "y": "G0xLmy6gPr5oM2L_GEQgNMCU8Gc0j4e9Z1aHp0GCekg"
+            },
+            "alg": "ES256"
+         },
+         "signature": "c0jMIZvYO76A2u75AsdLpR80lqGNoM2mAASr619duhtALRkijVT_wgBtumJt5MuPv1wA5v8Vsp29obFKnNkuDQ",
+         "protected": "eyJmb3JtYXRMZW5ndGgiOjI0MjExLCJmb3JtYXRUYWlsIjoiQ24wIiwidGltZSI6IjIwMTgtMDEtMjRUMTA6MDc6MDVaIn0"
+      }
+   ]
+}
