@@ -28,6 +28,9 @@ type Registries struct {
 	sync.Mutex
 }
 
+const STATUS_DOWN="DOWN"
+const STATUS_UP="UP"
+
 type Registry struct {
 	*client.Registry
 	Repositories map[string]*Repository
@@ -39,6 +42,7 @@ type Registry struct {
 	Version      string
 	Port         int
 	sync.Mutex
+	status string
 }
 
 func (r *Registry) IP() string {
@@ -199,11 +203,22 @@ func (r *Registry) Pulls() (pulls int) {
 
 // Status returns the text representation of whether the registry is reachable
 func (r *Registry) Status() string {
-	if err := r.Ping(); err != nil {
-		return "DOWN"
-	}
-	return "UP"
+	return r.status
 }
+
+func (r *Registry) RefreshStatus()  {
+	//refresh status
+	t:=time.NewTicker(5*time.Second)
+
+	for range t.C {
+		if err := r.Ping(); err != nil {
+			r.status=STATUS_DOWN
+		}else{
+			r.status=STATUS_UP
+		}
+	}
+}
+
 
 // AddRegistry adds the new registry for viewing in the interface and sets up
 // the go routine for automatic refreshes
@@ -243,8 +258,14 @@ func AddRegistry(scheme, host, user, password string, port int, ttl time.Duratio
 		Port:     port,
 		Version:  "v2",
 		Name:     host + ":" + strconv.Itoa(port),
+		status:STATUS_DOWN,
 	}
+
+
+	go r.RefreshStatus()
+
 	r.Refresh()
+
 
 	go func() {
 		for range r.Ticker.C {
