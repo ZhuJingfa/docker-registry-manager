@@ -109,13 +109,10 @@ func (r *Registry) url(pathTemplate string, args ...interface{}) string {
 
 func (r *Registry) Ping() error {
 	url := r.url("/v2/")
-	r.Logf("registry.ping url=%s", url)
 	resp, err := r.Client.Get(url)
+	r.Logf("registry.ping url=%s, err %v", url, err)
 	if resp != nil {
 		defer resp.Body.Close()
-	}
-	if err != nil {
-
 	}
 	return err
 }

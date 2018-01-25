@@ -55,9 +55,16 @@ func (r *Registry) IP() string {
 
 // Refresh is called with the configured TTL time for the given registry
 func (r *Registry) Refresh() {
-
+	//原来这里更新的都是副本。
 	// Copy the registry information to a new object, and update it
 	ur := *r
+
+	err := r.Ping();
+	if err != nil {
+		ur.status = STATUS_DOWN
+	} else {
+		ur.status = STATUS_UP
+	}
 
 	logrus.Info("Refreshing " + r.URL)
 	// Get the list of repositories
@@ -140,6 +147,7 @@ func (r *Registry) Refresh() {
 
 		//time.Sleep(10*time.Millisecond)
 	}
+
 	AllRegistries.Lock()
 	AllRegistries.Registries[ur.Name] = &ur
 	AllRegistries.Unlock()
@@ -206,19 +214,6 @@ func (r *Registry) Status() string {
 	return r.status
 }
 
-func (r *Registry) RefreshStatus()  {
-	//refresh status
-	t:=time.NewTicker(5*time.Second)
-
-	for range t.C {
-		if err := r.Ping(); err != nil {
-			r.status=STATUS_DOWN
-		}else{
-			r.status=STATUS_UP
-		}
-	}
-}
-
 
 // AddRegistry adds the new registry for viewing in the interface and sets up
 // the go routine for automatic refreshes
@@ -249,7 +244,8 @@ func AddRegistry(scheme, host, user, password string, port int, ttl time.Duratio
 		}
 	}
 
-	r := Registry{
+	//fuck, 这里是对象，不是指针
+	r := &Registry{
 		Registry: hub,
 		TTL:      ttl,
 		Ticker:   time.NewTicker(ttl),
@@ -260,9 +256,6 @@ func AddRegistry(scheme, host, user, password string, port int, ttl time.Duratio
 		Name:     host + ":" + strconv.Itoa(port),
 		status:STATUS_DOWN,
 	}
-
-
-	go r.RefreshStatus()
 
 	r.Refresh()
 
