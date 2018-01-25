@@ -21,10 +21,6 @@ func (c *RegistriesController) Get() {
 
 	c.Data["registries"] = manager.AllRegistries.Registries
 
-	for key, val := range manager.AllRegistries.Registries {
-		fmt.Printf("key %v, val %v", key, val.Status())
-	}
-
 	// Index template
 	c.TplName = "registries.tpl"
 }
