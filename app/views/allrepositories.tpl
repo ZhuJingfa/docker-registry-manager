@@ -39,7 +39,7 @@
 					{{range $registryName, $repositories := .repositories}} {{range $key, $repo := $repositories}}
 					<tr>
 						<td>
-							<a href=/registries/{{$registryName}}/repositories/{{urlquery $repo.Name}}/tags>{{$repo.Name}}</span></td>
+							<a href=/registries/{{registryNameShort $registryName}}/repositories/{{urlquery $repo.Name}}/tags>{{$repo.Name}}</span></td>
                   <td>{{$registryName}}</td>
                   <td data-order="{{$repo.Size}}">{{bytefmt $repo.Size}}</td>
                   <td>{{len $repo.Tags}}</td>

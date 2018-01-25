@@ -14,7 +14,7 @@ type RepositoriesController struct {
 // GetRepositories returns the template for the table on the repositories page
 func (c *RepositoriesController) GetRepositories() {
 
-	registryName := c.Ctx.Input.Param(":registryName")
+	registryName := FormatRegistryName(c.Ctx.Input.Param(":registryName"))
 
 	if r, ok := manager.AllRegistries.Registries[registryName]; ok {
 		c.Data["registryName"] = registryName

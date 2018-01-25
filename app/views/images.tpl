@@ -10,16 +10,16 @@
           <a href="/registries">Registries</a>
         </li>
         <li>
-          <a class="registry-name" href="/registries/{{.registryName}}/repositories">{{.registryName}}</a>
+          <a class="registry-name" href="/registries/{{registryNameShort .registryName}}/repositories">{{registryNameShort .registryName}}</a>
         </li>
         <li>
-          <a href="/registries/{{.registryName}}/repositories">Repositories</a>
+          <a href="/registries/{{registryNameShort .registryName}}/repositories">Repositories</a>
         </li>
         <li>
-          <a class="registry-name" href="/registries/{{.registryName}}/repositories/{{.repositoryNameEncode}}/tags">{{.repositoryName}}</a>
+          <a class="registry-name" href="/registries/{{registryNameShort .registryName}}/repositories/{{.repositoryNameEncode}}/tags">{{.repositoryName}}</a>
         </li>
         <li>
-          <a class="registry-name" href="/registries/{{.registryName}}/repositories/{{.repositoryNameEncode}}/tags">Tags</a>
+          <a class="registry-name" href="/registries/{{registryNameShort .registryName}}/repositories/{{.repositoryNameEncode}}/tags">Tags</a>
         </li>
         <li class="active">{{.tagName}}</li>
       </ol>
@@ -160,7 +160,7 @@
       <div class="row col-md-12">
         <h4>Pull</h4>
         <ul class="well well-md">
-          <code> docker pull {{.registryName}}/{{.repositoryName}}:{{.tagName}} </code>
+          <code> docker pull {{registryNameShort .registryName}}/{{.repositoryName}}:{{.tagName}} </code>
         </ul>
       </div>
       <div class="row col-md-12">
@@ -169,10 +169,10 @@
           <code>
             docker tag
             {{.repositoryName}}:{{.tagName}}
-            {{.registryName}}/{{.repositoryName}}:{{.tagName}}
+            {{registryNameShort .registryName}}/{{.repositoryName}}:{{.tagName}}
             <br>
             docker push
-            {{.registryName}}/{{.repositoryName}}:{{.tagName}}
+            {{registryNameShort .registryName}}/{{.repositoryName}}:{{.tagName}}
           </code>
         </ul>
       </div>
@@ -181,7 +181,7 @@
         <ul class="well well-md">
           <code class="bash">
             docker save
-            {{.registryName}}/{{.repositoryName}}:{{.tagName}}
+            {{registryNameShort .registryName}}/{{.repositoryName}}:{{.tagName}}
             -o registry.tar.gz
             <br>
             tar tv -f registry.tar.gz > registry.txt

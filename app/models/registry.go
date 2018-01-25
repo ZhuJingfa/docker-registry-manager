@@ -227,7 +227,14 @@ func AddRegistry(scheme, host, user, password string, port int, ttl time.Duratio
 		return nil, errors.New("Invalid port: " + strconv.Itoa(port))
 	}
 
-	url := fmt.Sprintf("%s://%s:%v", scheme, host, port)
+	var url string
+	if scheme == "https" && port == 443 {
+		url = fmt.Sprintf("%s://%s", scheme, host)
+	} else {
+		url = fmt.Sprintf("%s://%s:%v", scheme, host, port)
+	}
+
+
 	var hub *client.Registry
 	var err error
 	if skipTLS {

@@ -17,13 +17,13 @@
       <div class="col-lg-12">
         <ul class="boxes">
           {{range $key, $registry := .registries}}
-            <li data-registry="{{$registry.Name}}">
-              <a href="/registries/{{$registry.Name}}/repositories">
+            <li data-registry="{{registryNameShort $registry.Name}}">
+              <a href="/registries/{{registryNameShort $registry.Name}}/repositories">
                 <div class="white-bg box col-lg-4 col-md-6 col-sm-12 col-xs-12">
                   <div class="col-lg-12">
                     <div class="box-container">
                       <div class="box-header">
-                        <h2>{{$registry.Name}}</h2>
+                        <h2>{{registryNameShort $registry.Name}}</h2>
                       </div>
                       <div class="box-body col-md-12 border-between">
                         <div class="col-md-4 metric">

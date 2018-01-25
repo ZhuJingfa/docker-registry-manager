@@ -10,13 +10,13 @@
           <a href="/registries">Registries</a>
         </li>
         <li>
-          <a class="registry-name" href="/registries/{{.registryName}}/repositories">{{.registryName}}</a>
+          <a class="registry-name" href="/registries/{{registryNameShort .registryName}}/repositories">{{registryNameShort .registryName}}</a>
         </li>
         <li>
-          <a href="/registries/{{.registryName}}/repositories">Repositories</a>
+          <a href="/registries/{{registryNameShort .registryName}}/repositories">Repositories</a>
         </li>
         <li>
-          <a class="registry-name" href="/registries/{{.registryName}}/repositories/{{.repositoryNameEncode}}/tags">{{.repositoryName}}</a>
+          <a class="registry-name" href="/registries/{{registryNameShort .registryName}}/repositories/{{.repositoryNameEncode}}/tags">{{.repositoryName}}</a>
         </li>
         <li class="active">Tags</li>
       </ol>
@@ -25,7 +25,7 @@
       <div class="col-md-12">
         <h1>{{.repositoryName}}
           <small>
-            {{.registryName}}</small>
+            {{registryNameShort .registryName}}</small>
         </h1>
       </div>
     </div>
@@ -48,7 +48,7 @@
               {{range $key, $tag := .tags}}
                 <tr data-tag-name="{{$key}}">
                   <td></td>
-                  <td><a href=/registries/{{$.registryName}}/repositories/{{$.repositoryName}}/tags/{{$key}}/images>{{$key}}</span></td>
+                  <td><a href=/registries/{{registryNameShort $.registryName}}/repositories/{{$.repositoryName}}/tags/{{$key}}/images>{{$key}}</span></td>
                   <td>{{len $tag.DeserializedManifest.Layers}}</td>
                   <td>{{bytefmt $tag.Size}}</td>
                   <td data-order="{{$tag.LastModified.Unix}}">{{timeAgo $tag.LastModified}}</td>
@@ -198,7 +198,7 @@
           var tagName = $(this).data("tag-name");
           $.ajax({
             type: "POST",
-            url: "/registries/{{.registryName}}/repositories/{{.repositoryNameEncode}}/tags/" + tagName + "/delete",
+            url: "/registries/{{registryNameShort .registryName}}/repositories/{{.repositoryNameEncode}}/tags/" + tagName + "/delete",
             statusCode: {
               404: function () {
                 $("#delete-tags").append(

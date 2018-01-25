@@ -15,7 +15,7 @@ type ImagesController struct {
 // GetImages returns the template for the images page
 func (c *ImagesController) GetImages() {
 
-	registryName := c.Ctx.Input.Param(":registryName")
+	registryName := FormatRegistryName(c.Ctx.Input.Param(":registryName"))
 	repositoryName, _ := url.QueryUnescape(c.Ctx.Input.Param(":splat"))
 	repositoryNameEncode := url.QueryEscape(repositoryName)
 	c.Data["tagName"] = c.Ctx.Input.Param(":tagName")

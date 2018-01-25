@@ -3,17 +3,38 @@ package registry
 import (
 	"errors"
 	"fmt"
-	"strconv"
 	"time"
 
 	"github.com/astaxie/beego"
 	client "github.com/zhujingfa/docker-registry-client/registry"
 	"github.com/zhujingfa/docker-registry-manager/app/models"
+	"strings"
+	"net/url"
 )
 
 // RegistriesController extends the beego.Controller type
 type RegistriesController struct {
 	beego.Controller
+}
+
+//处理https默认端口443
+func FormatRegistryName(r string) string {
+	if strings.Index(r, ":") == -1 {
+		return r + ":443"
+	}
+	return r
+}
+
+func RegistryNameShort(s string) string {
+	var parse string = s
+	if strings.Index(s, "http") == -1 {
+		parse = "https://" + s
+	}
+	uinfo, _ := url.Parse(parse)
+	if uinfo.Port() == "443" {
+		return uinfo.Hostname()
+	}
+	return s
 }
 
 // Get returns the template for the registries page
@@ -126,7 +147,7 @@ func (c *RegistriesController) sanitizeForm() (scheme, host string, port int, sk
 		err = errors.New("Invalid host: " + host)
 		return
 	case port == 0:
-		err = errors.New("Invalid port: " + strconv.Itoa(port))
+		port = 443
 		return
 	}
 	return

@@ -17,7 +17,7 @@ type TagsController struct {
 // GetTags returns the template for the registries page
 func (c *TagsController) GetTags() {
 
-	registryName := c.Ctx.Input.Param(":registryName")
+	registryName := FormatRegistryName(c.Ctx.Input.Param(":registryName"))
 	repositoryName, _ := url.QueryUnescape(c.Ctx.Input.Param(":splat"))
 	repositoryNameEncode := url.QueryEscape(repositoryName)
 
@@ -36,7 +36,7 @@ func (c *TagsController) GetTags() {
 
 // DeleteTags deletes the manifest using the passed tag using the digest method
 func (c *TagsController) DeleteTags() {
-	registryName := c.Ctx.Input.Param(":registryName")
+	registryName := FormatRegistryName(c.Ctx.Input.Param(":registryName"))
 	repositoryName, _ := url.QueryUnescape(c.Ctx.Input.Param(":splat"))
 	tag := c.Ctx.Input.Param(":tagName")
 

@@ -10,14 +10,14 @@
           <a href="/registries">Registries</a>
         </li>
         <li>
-          <a class="registry-name" href="/registries/{{.registryName}}/repositories">{{.registryName}}</a>
+          <a class="registry-name" href="/registries/{{registryNameShort .registryName}}/repositories">{{registryNameShort .registryName}}</a>
         </li>
         <li class="active">Repositories</li>
       </ol>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <h1>{{.registryName}}</h1>
+        <h1>{{registryNameShort .registryName}}</h1>
       </div>
     </div>
     <div class="content-block white-bg">
@@ -34,7 +34,7 @@
             {{range $key, $repository := .repositories}}
               <tr>
                 <td>
-                  <a href="/registries/{{$.registryName}}/repositories/{{urlquery $repository.Name}}/tags">{{$repository.Name}}</span></td>
+                  <a href="/registries/{{registryNameShort $.registryName}}/repositories/{{urlquery $repository.Name}}/tags">{{$repository.Name}}</span></td>
                 <td data-order="{{$repository.Size}}">{{bytefmt $repository.Size}}</td>
                 <td>{{len $repository.Tags}}</td>
               </tr>

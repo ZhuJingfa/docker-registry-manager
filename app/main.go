@@ -17,6 +17,7 @@ import (
 	"github.com/spf13/viper"
 	"github.com/urfave/cli"
 	"runtime/pprof"
+	"github.com/zhujingfa/docker-registry-manager/app/controllers/registry"
 )
 
 const (
@@ -71,7 +72,11 @@ func main() {
 				if err != nil {
 					logrus.Fatalf("Failed to parse registry from the passed url (%s): %s", r.URL, err)
 				}
-				port, err := strconv.Atoi(url.Port())
+				ps := url.Port()
+				if ps == "" {
+					ps = "443"
+				}
+				port, err := strconv.Atoi(ps)
 				if err != nil || port == 0 {
 					logrus.Fatalf("Failed to add registry (%s), invalid port: %s", r.URL, err)
 				}
@@ -112,6 +117,7 @@ func main() {
 		beego.AddFuncMap("bytefmtdiff", ByteDiffFmt)
 		beego.AddFuncMap("timeAgo", TimeAgo)
 		beego.AddFuncMap("oneIndex", func(i int) int { return i + 1 })
+		beego.AddFuncMap("registryNameShort", registry.RegistryNameShort)
 
 		if Pprof!="" {
 			return

@@ -6,6 +6,7 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/zhujingfa/docker-registry-manager/app/models"
+	"github.com/zhujingfa/docker-registry-manager/app/controllers/registry"
 )
 
 // EventsController handles all posting of envelopes from the registries configured endpoints
@@ -24,7 +25,7 @@ func (c *EventsController) Get() {
 // GetRegistryEvents returns the JSON representation of all events for the given registry
 func (c *EventsController) GetRegistryEvents() {
 	// Get the registry
-	registryName := c.Ctx.Input.Param(":registryName")
+	registryName := registry.FormatRegistryName(c.Ctx.Input.Param(":registryName"))
 
 	manager.AllEvents.Lock()
 	defer manager.AllEvents.Unlock()
@@ -42,7 +43,7 @@ func (c *EventsController) GetRegistryEvents() {
 // representation of the event
 func (c *EventsController) GetRegistryEventID() {
 	// Get the registry
-	registryName := c.Ctx.Input.Param(":registryName")
+	registryName := registry.FormatRegistryName(c.Ctx.Input.Param(":registryName"))
 
 	manager.AllEvents.Lock()
 	defer manager.AllEvents.Unlock()
