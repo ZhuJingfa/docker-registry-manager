@@ -42,15 +42,12 @@ type Registry struct {
 	Version      string
 	Port         int
 	sync.Mutex
-	status string
+	status       string
+	ip           string
 }
 
 func (r *Registry) IP() string {
-	ip, _ := net.LookupHost(r.Host)
-	if len(ip) > 0 {
-		return ip[0]
-	}
-	return ""
+	return r.ip
 }
 
 // Refresh is called with the configured TTL time for the given registry
@@ -64,6 +61,11 @@ func (r *Registry) Refresh() {
 		ur.status = STATUS_DOWN
 	} else {
 		ur.status = STATUS_UP
+	}
+
+	ip, _ := net.LookupHost(r.Host)
+	if len(ip) > 0 {
+		r.ip = ip[0]
 	}
 
 	logrus.Info("Refreshing " + r.URL)
