@@ -10,6 +10,9 @@
 
 改用goroutine在后台更新Status，然后函数返回缓存状态值，速度快了很多。
 
+01.26 /registries页面请求/registries/all/repositories/count，请求所有库目录的，还是发现多了两个请求
+删除了即时统计的需求，改为了使用TTL更新的缓存。
+
 ```
 {{if eq $registry.Status "UP" }}
   <span class="label label-success text-capitalize">{{$registry.Status}}</span>
@@ -39,4 +42,14 @@ DEBU[0024] registry.ping url=https://aliyun.node.ifanghui.cn:7788/v2/
 DEBU[0024] registry.ping url=https://registry.alishui.com:443/v2/
 DEBU[0024] registry.ping url=https://registry.alishui.com:443/v2/
 DEBU[0029] |      127.0.0.1| 200 | 5.300475969s|   match| GET      /registries   r:/registries  file=log.go line=615 source=beego
+```
+
+01.26 /registries页面请求/registries/all/repositories/count，请求所有库目录的，还是发现多了两个请求
+
+```
+DEBU[0064] |      127.0.0.1| 200 |  16.170527ms|   match| GET      /registries   r:/registries  file=log.go line=615 source=beego
+DEBU[0064] |      127.0.0.1| 200 |     64.484µs|   match| GET      /registries/all/count   r:/registries/all/count  file=log.go line=615 source=beego
+DEBU[0064] registry.repositories url=https://aliyun.node.ifanghui.cn:7788/v2/_catalog  file=log.go line=615 source=beego
+DEBU[0064] registry.repositories url=https://registry.alishui.com/v2/_catalog  file=log.go line=615 source=beego
+DEBU[0064] |      127.0.0.1| 200 |  67.123618ms|   match| GET      /registries/all/repositories/count   r:/registries/all/repositories/count  file=log.go line=615 source=beego
 ```
