@@ -81,9 +81,9 @@ func main() {
 					logrus.Fatalf("Failed to add registry (%s), invalid port: %s", r.URL, err)
 				}
 				duration, err := time.ParseDuration(r.RefreshRate)
-				//最小5分钟刷新一次
-				if duration<300*time.Minute {
-					duration=300*time.Minute
+				//最小1分钟刷新一次
+				if duration < 1*time.Minute {
+					duration = 1 * time.Minute
 				}
 				if err != nil {
 					logrus.Fatalf("Failed to add registry (%s), invalid duration: %s", r.URL, err)

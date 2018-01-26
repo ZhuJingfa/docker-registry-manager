@@ -14,7 +14,7 @@
 					</fieldset>
 					<fieldset class="form-group">
 						<label for="port-input">Port</label>
-						<input type="text" class="form-control" id="port-input" name="port" placeholder="default: 5000">
+						<input type="text" class="form-control" id="port-input" name="port" placeholder="default: 443">
 					</fieldset>
 					<fieldset class="form-group">
 						<label for="scheme-input">Scheme</label>
@@ -34,7 +34,7 @@
 					</fieldset>
 					<fieldset class="form-group">
 						<label for="interval-input">Refresh Interval (seconds)</label>
-						<input type="text" class="form-control" id="interval-input" name="interval" placeholder="default: 10">
+						<input type="text" class="form-control" id="interval-input" name="interval" placeholder="default: 60">
 					</fieldset>
 					<div class="modal-footer">
 						<button style="float:left;" type="button" id="test" class="btn btn-warning">Test</button>

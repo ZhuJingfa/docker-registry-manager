@@ -68,13 +68,13 @@ func (c *RegistriesController) AddRegistry() {
 		c.CustomAbort(404, err.Error())
 	}
 
-	interval, err := c.GetInt("interval", 10)
+	interval, err := c.GetInt("interval", 60)
 	if err != nil {
 		c.CustomAbort(404, err.Error())
 	}
-	//最小5分钟刷新一次
-	if interval<300 {
-		interval=300
+	//最小1分钟刷新一次
+	if interval < 60 {
+		interval = 60
 	}
 	ttl := time.Duration(interval) * time.Second
 
@@ -132,7 +132,7 @@ func (c *RegistriesController) TestRegistryStatus() {
 
 func (c *RegistriesController) sanitizeForm() (scheme, host string, port int, skipTLS bool, err error) {
 	host = c.GetString("host")
-	port, err = c.GetInt("port", 5000)
+	port, err = c.GetInt("port", 443)
 	scheme = c.GetString("scheme", "https")
 	skipTLSOn := c.GetString("skip-tls-validation", "off")
 	if skipTLSOn == "on" {
