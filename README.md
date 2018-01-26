@@ -1,14 +1,49 @@
 
-# Docker Registry Manager [![Go Report Card](https://goreportcard.com/badge/github.com/snagles/docker-registry-manager)](https://goreportcard.com/report/github.com/snagles/docker-registry-manager) [![GoDoc](https://godoc.org/github.com/snagles/docker-registry-manager?status.svg)](https://godoc.org/github.com/snagles/docker-registry-manager)  
+# Docker Registry Manager 
 
 Docker Registry Manager is a golang written, beego driven, web interface for interacting with multiple docker registries (one to many).
 
-| Service   |  Master  | Develop  |   
-|---|---|---|
-| Status   | ![Build Status](https://travis-ci.org/snagles/docker-registry-manager.svg?branch=master)  | ![Build Status](https://travis-ci.org/snagles/docker-registry-manager.svg?branch=develop)   |
-| Coverage  | [![Coverage Status](https://codecov.io/gh/snagles/docker-registry-manager/branch/master/graph/badge.svg)](https://codecov.io/gh/snagles/docker-registry-manager)  | [![Coverage Status](https://codecov.io/gh/snagles/docker-registry-manager/branch/develop/graph/badge.svg)](https://codecov.io/gh/snagles/docker-registry-manager)  |
+## Impove by Zhujingfa，更快速更稳定。
 
-![Example](https://github.com/snagles/resources/blob/master/docker-registry-manager-updated.gif)
+- Lower cpu usage, disable snagles/docker-registry-manager's regex tag analyse, it is a eat cpu lion.
+- Improve performance, tagsize(), Status(), IP() some sync remote request all use async Reresh method.
+- Improve docker image build,after build , only 21M after expand.
+- Remove dockerhub support, it is very slow in China.
+
+# 怎么支持tag删除？
+
+registry.yml add enable delete.
+```
+# https://docs.docker.com/registry/configuration/
+version: 0.1
+log:
+  fields:
+    service: registry
+  accesslog:
+    disabled: true
+  level: error
+storage:
+  cache:
+    blobdescriptor: inmemory
+  filesystem:
+    rootdirectory: /var/lib/registry
+  # 开启删除功能
+  delete:
+    enabled: true
+http:
+  addr: :5000
+  headers:
+    X-Content-Type-Options: [nosniff]
+health:
+  storagedriver:
+    enabled: true
+    interval: 10s
+    threshold: 3
+auth:
+  htpasswd:
+    realm: basic-realm
+    path: /registry/config/htpasswd
+```
 
 ## Quickstart
  The below steps assume you have a docker registry currently running (with delete mode enabled (https://docs.docker.com/registry/configuration/). To add a registry to manage, add via the interface... or via the config.yml file
